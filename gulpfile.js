@@ -13,9 +13,11 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger');
 
 gulp.task('sass', function(){
-    return gulp.src('app/sass/**/*.sass')
+    return gulp.src('app/sass/main.sass')
         .pipe(sass())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(cssnano())
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}))
 });
@@ -36,8 +38,8 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('app/js'))
 });
 
-gulp.task('css-minimize', ['sass'],  function () {
-    return gulp.src('app/css/main.css')
+gulp.task('cssLibMin',  function () {
+    return gulp.src('app/libs/normalize-css/normalize.css')
         .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('app/css'))
@@ -49,7 +51,7 @@ gulp.task('rigger', function () {
         .pipe(gulp.dest('app/'))
 });
 
-gulp.task('watch', ['browser-sync', 'css-minimize', 'scripts'], function () {
+gulp.task('watch', ['browser-sync', 'sass', 'cssLibMin', 'scripts'], function () {
     gulp.watch('app/sass/**/*.sass', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
@@ -76,8 +78,8 @@ gulp.task('img', function () {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('build', ['clean', 'img' , 'sass', 'scripts'], function (){
-    var buildCss = gulp.src('app/css/main.min.css')
+gulp.task('build', ['clean', 'img' , 'sass', 'cssLibMin', 'scripts'], function (){
+    var buildCss = gulp.src('app/css/**/*.css')
         .pipe(gulp.dest('dist/css'));
 
     var buldFonts = gulp.src('app/fonts/**/*')

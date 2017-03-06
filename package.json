@@ -1,21 +1,21 @@
 {
-  "name": "gulp-lesson",
+  "name": "pink",
   "version": "1.0.0",
-  "description": "It's my studying gulp project",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mozolevsky/gulp-lesson.git"
+    "url": "git+https://github.com/mozolevsky/pink.git"
   },
   "author": "Mozolevsky",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mozolevsky/gulp-lesson/issues"
+    "url": "https://github.com/mozolevsky/pink.git/issues"
   },
-  "homepage": "https://github.com/mozolevsky/gulp-lesson#readme",
+  "homepage": "https://github.com/mozolevsky/pink.git#readme",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
