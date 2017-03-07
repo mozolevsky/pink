@@ -1,6 +1,7 @@
 .main-header
-  background-color: $fontBlack
-  opacity: 0.3
+  background-color: rgba(0, 0, 0, 0.3)
+  position: absolute
+  width: 100%
 
   &__logo
     padding: 20px 0 20px 0
@@ -10,9 +11,11 @@
     width: 52px
     height: 24px
 
-
     &:hover
       cursor: pointer
+
+  &__navigation
+    display: none
 
 @media (min-width: 700px)
   .main-header__logo
@@ -20,3 +23,15 @@
       top: 25px
       bottom: 40px
 
+@media (min-width: 1200px)
+  .main-header__navigation
+    display: flex
+    justify-content: space-between
+    width: 625px
+
+  .main-header__nav-link
+    color: $fontWhite
+    text-decoration: none
+
+  .main-header__nav-button
+    display: none
