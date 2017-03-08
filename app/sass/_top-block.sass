@@ -1,20 +1,81 @@
 .top-block
-  display: block
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
   min-height: 735px
   background: url("../img/mobile/top-block-bg-mobile.png") no-repeat top center
   background-color: $topBlockBgColor
+
+.download-app
+  display: flex
+  flex-direction: column
+  align-items: center
+  min-height: 217px
+  justify-content: space-between
+
+  &__title
+    display: none
+
+  &__button
+    +font()
+    font-weight: bold
+    +btn-oval($fontWhite, $fontWhite, transparent, 280px)
+
+  &__flex-wrapper
+    display: flex
+    justify-content: space-around
+    align-items: center
+    width: 250px
+  
+  &__icon
+    display: block
+    width: 50px
+    height: 60px
+
+  &__icon_apple
+    background: url("../img/icons/apple-logo.svg") no-repeat center bottom
+
+  &__icon_android
+    background: url("../img/icons/android-logo.svg") no-repeat center bottom
+
+  &__icon_windows
+    background: url("../img/icons/microsoft-logo.svg") no-repeat center bottom
+
+  &__desc
+    +font(14px, $fontWhite)
+    line-height: 24px
+    text-align: center
+
 
 @media(min-width: 321px) and (max-width: 699px)
   .top-block
     background: url("../img/mobile/top-block-bg-mobile-arm.png") no-repeat center 154px, url("../img/mobile/top-block-bg-mobile-city.png") no-repeat top center
     background-color: $topBlockBgColor
 
-@media(min-width: 700px) and (max-width: 1200px)
+  .download-app
+    min-height: 200px
+
+@media(min-width: 700px) and (max-width: 939px)
   .top-block
     background: url("../img/tablet/top-block-bg-tablet.jpg") no-repeat center
     background-color: $topBlockBgColor
+    justify-content: center
 
-@media(min-width: 1200px)
+  .download-app
+    width: 300px
+    min-height: 410px
+    margin-top: 125px
+
+    &__title
+      display: block
+      text-align: center
+      +font(40px, $fontWhite)
+      font-weight: lighter
+      margin: 0 40px
+
+
+@media(min-width: 940px)
   .top-block
     background: url("../img/desctop/top-block-bg-desctop.jpg") no-repeat center
     background-color: $topBlockBgColor
+
