@@ -63,8 +63,8 @@
 
   .download-app
     width: 300px
-    min-height: 410px
-    margin-top: 125px
+    min-height: 406px
+    margin-top: 114px
 
     &__title
       display: block
@@ -73,9 +73,29 @@
       font-weight: lighter
       margin: 0 40px
 
+    &__button
+      width: 300px
+
+    &__desc
+      +font(18px, $fontWhite)
+      font-weight: lighter
+
 
 @media(min-width: 940px)
   .top-block
-    background: url("../img/desctop/top-block-bg-desctop.jpg") no-repeat center
+    background: url("../img/desctop/top-block-bg-desctop.jpg") no-repeat center 0
     background-color: $topBlockBgColor
+    min-height: 854px
+    justify-content: center
 
+  .download-app
+    width: 300px
+    min-height: 510px
+    margin-top: 154px
+
+    &__title
+      display: block
+      text-align: center
+      +font(50px, $fontWhite)
+      font-weight: lighter
+      margin: 0 40px

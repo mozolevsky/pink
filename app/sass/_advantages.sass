@@ -1,0 +1,71 @@
+.advantages
+  background-color: $fontWhite
+  line-height: 24px
+
+  &__title-block
+    padding: 0
+
+  &__title
+    text-align: center
+    +font(24px)
+    font-weight: lighter
+    margin: 1.7em 0
+
+  &__flex-wrapper
+    display: flex
+    flex-direction: column
+
+  &__features
+    background-color: $bgGray
+    padding-top: 54px
+
+  &__item
+    text-align: center
+    margin-bottom: 40px
+
+  &__item-title
+    line-height: 10px
+
+  &__item-title_zero-margin
+    margin-top: 0
+
+  &__item-title
+    font-weight: bold
+    margin-bottom: 15px
+
+  &__item-desc
+    +font(14px)
+
+  &__photos-block
+    text-align: center
+
+
+@media(min-width: 700px) and (max-width: 939px)
+  .advantages
+
+    &__title-block
+      padding-top: 40px
+      padding-bottom: 90px
+
+    &__title
+      +font(40px)
+      font-weight: lighter
+      margin: 0
+      line-height: 1.2em
+
+    &__title:nth-child(2)
+      padding: 0 24px
+
+    &__flex-wrapper
+      flex-direction: row-reverse
+      justify-content: space-between
+
+    &__features
+      padding-top: 28px
+
+    &__photos-block
+      margin-right: 40px
+      margin-top: -80px
+
+    &__item
+      text-align: left
