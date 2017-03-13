@@ -1,14 +1,12 @@
 .top-block
-  display: flex
-  flex-direction: column
+  +flex(column)
   justify-content: flex-end
   min-height: 735px
   background: url("../img/mobile/top-block-bg-mobile.png") no-repeat top center
   background-color: $topBlockBgColor
 
 .download-app
-  display: flex
-  flex-direction: column
+  +flex(column)
   align-items: center
   min-height: 217px
   justify-content: space-between
@@ -22,7 +20,7 @@
     +btn-oval($fontWhite, $fontWhite, transparent, 280px)
 
   &__flex-wrapper
-    display: flex
+    +flex()
     justify-content: space-around
     align-items: center
     width: 250px
@@ -99,3 +97,6 @@
       +font(50px, $fontWhite)
       font-weight: lighter
       margin: 0 40px
+
+    &__button
+      +btn-oval($fontWhite, $fontWhite, transparent, 300px)

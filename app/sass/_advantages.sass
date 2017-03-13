@@ -7,13 +7,12 @@
 
   &__title
     text-align: center
-    +font(24px)
+    +font(6vw)
     font-weight: lighter
     margin: 1.7em 0
 
   &__flex-wrapper
-    display: flex
-    flex-direction: column
+    +flex(column)
 
   &__features
     background-color: $bgGray
@@ -26,7 +25,7 @@
   &__item-title
     line-height: 10px
 
-  &__item-title_zero-margin
+  &__item-title:first-child
     margin-top: 0
 
   &__item-title
@@ -39,22 +38,28 @@
   &__photos-block
     text-align: center
 
+  &__photo
+    display: none
+
+  &__photo_main
+    display: block
+
 
 @media(min-width: 700px) and (max-width: 939px)
   .advantages
 
     &__title-block
       padding-top: 40px
-      padding-bottom: 90px
+      padding-bottom: 44px
 
     &__title
-      +font(40px)
+      +font(5vw)
       font-weight: lighter
       margin: 0
       line-height: 1.2em
 
     &__title:nth-child(2)
-      padding: 0 24px
+      padding: 0 18vw
 
     &__flex-wrapper
       flex-direction: row-reverse
@@ -69,3 +74,53 @@
 
     &__item
       text-align: left
+
+@media (min-width: 940px)
+  .advantages
+
+    &__title-block
+      padding-top: 68px
+      padding-bottom: 81px
+
+    &__title
+      +font(4vw)
+      font-weight: lighter
+      line-height: 58px
+      margin: 0
+
+    &__title:nth-child(2)
+      padding: 0 18vw
+
+    &__features
+      padding-top: 0
+
+    &__photos-block
+      +flex()
+      justify-content: space-around
+
+    &__photo
+      display: block
+
+    &__flex-wrapper
+      flex-direction: column-reverse
+
+    &__list
+      +flex()
+      justify-content: space-around
+      padding-top: 50px
+
+    &__photos-block
+      margin-top: -90px
+
+    &__item
+      width: 240px
+
+    &__item-title
+      +font(30px)
+      font-weight: bold
+      line-height: 30px
+      margin-bottom: 25px
+
+    &__item-desc
+      +font()
+      line-height: 30px
