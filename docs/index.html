@@ -12,14 +12,98 @@
         <div class="flex-wrapper">
             <div class="main-header__logo">
                 <picture>
-                    <source media="(min-width: 1200px)" srcset="img/desctop/logotype-white-desktop.png">
+                    <source media="(min-width: 940px)" srcset="img/desctop/logotype-white-desktop.png">
                     <source media="(min-width: 700px)" srcset="img/tablet/logotype-white-tablet.png">
                     <img srcset="img/mobile/logotype-white-mobile.png">
                 </picture>
             </div>
             <div class="main-header__nav-button"></div>
+            <nav class="main-header__navigation">
+                <a href="#" class="main-header__nav-link">Главная</a>
+                <a href="#" class="main-header__nav-link">Фотографии</a>
+                <a href="#" class="main-header__nav-link">Конкурс</a>
+                <a href="#" class="main-header__nav-link">HTML Academy</a>
+            </nav>
         </div>
     </div>
 </header>
+<main class="main-container">
+    <div class="top-block">
+        <div class="container">
+            <div class="download-app">
+                <h1 class="download-app__title">Взгляните на жизнь иначе!</h1>
+                <button class="download-app__button" type="button">Скачать приложение</button>
+                <div class="download-app__flex-wrapper">
+                    <div class="download-app__icon download-app__icon_apple"></div>
+                    <div class="download-app__icon download-app__icon_android"></div>
+                    <div class="download-app__icon download-app__icon_windows"></div>
+                </div>
+                <div class="download-app__desc">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
+            </div>
+        </div>
+    </div>
+    <div class="advantages">
+        <div class="container">
+            <div class="advantages__title-block">
+                <p class="advantages__title">Устали от серости мегаполиса?</p>
+                <p class="advantages__title">Нам есть что вам предложить!</p>
+            </div>
+        </div>
+        <svg class="svg-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <polygon points="100 0 100 10 0 10" />
+        </svg>
+        <div class="advantages__features">
+            <div class="container">
+                <div class="advantages__flex-wrapper">
+                    <div class="advantages__list">
+                        <div class="advantages__item">
+                            <p class="advantages__item-title">Поднимает настроение</p>
+                            <p class="advantages__item-desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+                        </div>
+                        <div class="advantages__item">
+                            <p class="advantages__item-title">Меняет мир вокруг</p>
+                            <p class="advantages__item-desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                        </div>
+                        <div class="advantages__item">
+                            <p class="advantages__item-title">Заводит новых друзей</p>
+                            <p class="advantages__item-desc">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+                        </div>
+                    </div>
+                    <div class="advantages__photos-block">
+                        <div class="advantages__photo">
+                            <img srcset="img/desctop/advantage-photo1-desctop.png">
+                        </div>
+                        <div class="advantages__photo">
+                            <img srcset="img/desctop/advantage-photo2-desctop.png">
+                        </div>
+                        <picture class="advantages__photo advantages__photo_main">
+                            <source media="(min-width: 940px)" srcset="img/desctop/advantage-photo3-desctop.png">
+                            <source media="(min-width: 700px)" srcset="img/tablet/advantage-photo-tablet.png">
+                            <img srcset="img/mobile/advantage-photo-mobile.png">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fact">
+        <div class="container">
+            <div class="flex-wrapper">
+                <picture class="fact__img">
+                    <source media="(min-width: 940px)" srcset="img/desctop/logotype-white-desktop.png">
+                    <img srcset="img/mobile/logotype-white-mobile.png">
+                </picture>
+                <div class="fact__desc">
+                    <p class="fact__title">Эффект на 24 часа!</p>
+                    <div class="fact__short-desc">Британские ученые провели исследования и доказали,
+                        что положительный эффект от использования приложения длится целые сутки!
+                    </div>
+                    <a class="fact__link" href="#">Узнать больше об исследовании</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
 </body>
 </html>
